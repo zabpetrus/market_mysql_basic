@@ -1,4 +1,13 @@
 USE BazarDB;
+/*
+PROCEDIMENTO PARA O BANCO DE DADOS (SCHEMA) BAZARDB!
+OBSERVAR OS INSERTS!!!
+*/
+
+DELIMITER //
+CREATE PROCEDURE PopularTabelas()
+BEGIN
+
 
 -- Populando Clients
 
@@ -185,12 +194,6 @@ SELECT 10, 'Brown & Co', '06.858.836/0001-08', 'brown@maroon.com', 'San Francisc
 WHERE NOT EXISTS (SELECT 1 FROM suppliers WHERE suppliers.s_cnpj = '06.858.836/0001-08');
 
 
+END//
 
-
- 
-
-
-
- 
- 
- 
+DELIMITER ;

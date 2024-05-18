@@ -14,7 +14,8 @@ A seguir, serão detalhados alguns aspectos do projeto:
 
 ## Pastas
 
-**launchers** - contém um script python que popula a tabela carga: script básico ainda não testado e sem validação
+**launchers** - contém um projeto python que popula a tabela carga: script básico ainda não testado e sem validação. Se alguém quiser contribuir para melhorá-lo, é bem vindo.
+
 
 **scripts_desenvolvimento** - contém scripts sql para serem usados no ambiente de desenvolvimento. As procedures contém instruções de criação e remoção de tabelas e procedures, para auxiliar quem está modelando a estrutura do banco de dados.
 

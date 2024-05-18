@@ -1,0 +1,18 @@
+USE BazarDB;
+
+DELIMITER //
+
+DROP PROCEDURE IF EXISTS VerificarEstoque;
+
+CREATE PROCEDURE VerificarEstoque()
+BEGIN
+
+/* AINDA EM CONSTRUCAO */
+
+
+
+END//
+
+DELIMITER ;
+
+CALL VerificarEstoque;

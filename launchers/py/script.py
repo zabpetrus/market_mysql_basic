@@ -1,6 +1,13 @@
 import csv
 import mysql.connector
 
+"""
+*********************************************************************************
+    SCRIPT PARA POPULAR CARGA! PARA USAR SOMENTE MUDE OS VALORES NO CONECTOR!
+     ADAPTADO PARA TABELA CARGA, CUJA ESTRUTURA ENCONTRA-SE NO ARQUIVO SQL
+*********************************************************************************
+"""
+
 
 def mapping_row(linha, columns):
     resultado = (('#'.join(linha)).replace("#", "")).split(';')
@@ -13,8 +20,8 @@ def mapping_row(linha, columns):
 
 
 def script_main():
-    # MySQL connection parameters
-    cnx = mysql.connector.connect(user='root', password='823543', host='localhost', database='bazardb')
+    # MySQL connection parameters: complete with database parameters    
+    cnx = mysql.connector.connect(user='root', password='123456', host='localhost', database='meudatabase')
     cursor = cnx.cursor()
 
     # CSV file path
