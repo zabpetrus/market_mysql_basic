@@ -8,7 +8,7 @@ EXCLUSÃO DE TODAS AS TABELAS
 */
 
 -- Criando nova carga. Essa procedure pode ser feita n vezes
-CALL sp_CreateTableCarga;
+-- CALL sp_CreateTableCarga;
 
 CALL sp_DropForeignKeys();
 

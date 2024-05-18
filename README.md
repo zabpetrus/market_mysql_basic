@@ -1,7 +1,14 @@
 # Market mysql basic 
 
 Projeto de banco de dados básico utilizando o mysql
-Convém ressaltar que ainda está em construção.
+Convém ressaltar que ainda está em construção. 
+
+
+>
+
+> **ATENÇÃO!**   Este projeto é somente para referência! Como ainda está em construção, não deve ser copiado, pois devem haver muitos problemas que posteriormente serão corrigidos... Além de ser um trabalho que ainda está sendo avaliado!
+
+
 
 A seguir, serão detalhados alguns aspectos do projeto:
 
@@ -52,12 +59,16 @@ A seguir, estão as estruturas iniciais das tabelas que serão usadas no projeto
 		order_ship_city VARCHAR(50) NOT NULL,
 		order_ship_state VARCHAR(50) NOT NULL,
 		order_ship_postal_code VARCHAR(10) NOT NULL,
+		order_ship_address_1 VARCHAR(100) NOT NULL,
+		order_ship_address_2 VARCHAR(100) NOT NULL,
+		order_ship_address_3 VARCHAR(100) NOT NULL,
 		order_ship_country VARCHAR(30) NOT NULL,
 		order_currency VARCHAR(10) NOT NULL,
-		order_ship_service_level VARCHAR(20) DEFAULT 'Standard' CHECK (order_ship_service_level IN ('Standard', 'Express', 'Priority')),
+        order_ship_service_level VARCHAR(20) DEFAULT 'Standard Shipping' CHECK (order_ship_service_level IN ('Standard Shipping', 'Express Shipping', 'Priority Shipping')),
 		order_status_delivery VARCHAR(20) NOT NULL DEFAULT 'Processing' CHECK (order_status_delivery IN ('Processing', 'Shipped', 'Delivered', 'In Transit', 'Returned')),
 		FOREIGN KEY (client_id) REFERENCES Clients(client_id) ON DELETE CASCADE ON UPDATE CASCADE
 	);
+
 ~~~
 ~~~SQL
     -- Tabela OrderItems (estrutura inicial)
